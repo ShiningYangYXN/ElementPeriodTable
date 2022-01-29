@@ -1,0 +1,245 @@
+﻿<Window x:Name="window" x:Class="ElementPeriodTable.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElementPeridTable"
+        mc:Ignorable="d"
+        Title="搞定元素周期表" Height="450" Width="800" SizeChanged="Window_SizeChanged" Loaded="Window_Loaded" Closing="window_Closing" Icon="/icon.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="19*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ResetButton" Content="重置" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ResetButton_Click" Grid.ColumnSpan="2"/>
+            <Button x:Name="HelpButton" Grid.Column="2" Content="等级说明" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
+            <Button x:Name="LearnButton" Grid.Column="3" Content="学习" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="LearnButton_Click"/>
+            <Button x:Name="AboutButton" Grid.Column="4" Content="关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
+        </Grid>
+        <Grid Grid.ColumnSpan="2" Margin="0,36,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ProgressBar x:Name="ScoreProgressBar" Grid.Column="0" Maximum="10000" Value="0" Grid.ColumnSpan="2"/>
+
+            <Label Grid.Column="0" x:Name="lvLabel" Content="🏆0|默默无闻" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="Auto" Height="Auto" VerticalAlignment="Stretch" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="1" x:Name="scrLabel" Content="💎0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="Auto" Height="Auto" VerticalAlignment="Stretch" FontSize="{Binding FontSize, ElementName=window}"/>
+
+        </Grid>
+
+        <Grid x:Name="MainGrid" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,36,0,0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition IsEnabled="False" Language="zh-cn" Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Grid.Row="1" x:Name="btnH" Tag="H,氢,1.008" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="18" Grid.Row="1" x:Name="btnHe" Tag="He,氦,4.003" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="1" Grid.Row="2" x:Name="btnLi" Tag="Li,锂,6.941" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="2" Grid.Row="2" x:Name="btnBe" Tag="Be,铍,9.012" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="13" Grid.Row="2" x:Name="btnB" Tag="B,硼,10.81" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="14" Grid.Row="2" x:Name="btnC" Tag="C,碳,12.01" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="15" Grid.Row="2" x:Name="btnN" Tag="N,氮,14.01" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="16" Grid.Row="2" x:Name="btnO" Tag="O,氧,16.00" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="17" Grid.Row="2" x:Name="btnF" Tag="F,氟,19.00" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="18" Grid.Row="2" x:Name="btnNe" Tag="Ne,氖,20.18" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="1" Grid.Row="3" x:Name="btnNa" Tag="Na,钠,22.99" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="2" Grid.Row="3" x:Name="btnMg" Tag="Mg,镁,24.31" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="13" Grid.Row="3" x:Name="btnAl" Tag="Al,铝,26.98" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="14" Grid.Row="3" x:Name="btnSi" Tag="Si,硅,28.09" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="15" Grid.Row="3" x:Name="btnP" Tag="P,磷,30.96" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="16" Grid.Row="3" x:Name="btnS" Tag="S,硫,32.06" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="17" Grid.Row="3" x:Name="btnCl" Tag="Cl,氯,35.45" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="18" Grid.Row="3" x:Name="btnAr" Tag="Ar,氩,39.95" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="1" Grid.Row="4" x:Name="btnK" Tag="K,钾,39.10" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="2" Grid.Row="4" x:Name="btnCa" Tag="Ca,钙,40.08" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="3" Grid.Row="4" x:Name="btnSc" Tag="Sc,钪,44.96" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="4" Grid.Row="4" x:Name="btnTi" Tag="Ti,钛,47.87" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="5" Grid.Row="4" x:Name="btnV" Tag="V,钒,50.94" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="6" Grid.Row="4" x:Name="btnCr" Tag="Cr,铬,52.00" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="7" Grid.Row="4" x:Name="btnMn" Tag="Mn,锰,54.94" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="8" Grid.Row="4" x:Name="btnFe" Tag="Fe,铁,55.85" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="9" Grid.Row="4" x:Name="btnCo" Tag="Co,钴,58.93" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="10" Grid.Row="4" x:Name="btnNi" Tag="Ni,镍,58.69" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="11" Grid.Row="4" x:Name="btnCu" Tag="Cu,铜,63.55" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="12" Grid.Row="4" x:Name="btnZn" Tag="Zn,锌,65.39" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="13" Grid.Row="4" x:Name="btnGa" Tag="Ga,镓,69.72" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="14" Grid.Row="4" x:Name="btnGe" Tag="Ge,锗,72.64" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="15" Grid.Row="4" x:Name="btnAs" Tag="As,砷,74.92" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="16" Grid.Row="4" x:Name="btnSe" Tag="Se,硒,78.96" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="17" Grid.Row="4" x:Name="btnBr" Tag="Br,溴,79.90" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="18" Grid.Row="4" x:Name="btnKr" Tag="Kr,氪,83.80" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="1" Grid.Row="5" x:Name="btnRb" Tag="Rb,铷,85.47" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="2" Grid.Row="5" x:Name="btnSr" Tag="Sr,锶,87.62" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="3" Grid.Row="5" x:Name="btnY" Tag="Y,钇,88.91" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="4" Grid.Row="5" x:Name="btnZr" Tag="Zr,锆,91.22" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="5" Grid.Row="5" x:Name="btnNb" Tag="Nb,铌,92.91" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="6" Grid.Row="5" x:Name="btnMo" Tag="Mo,钼,95.94" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="7" Grid.Row="5" x:Name="btnTc" Tag="Tc,锝,[98]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="8" Grid.Row="5" x:Name="btnRu" Tag="Ru,钌,101.1" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="9" Grid.Row="5" x:Name="btnRh" Tag="Rh,铑,102.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="10" Grid.Row="5" x:Name="btnPd" Tag="Pd,钯,106.4" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="11" Grid.Row="5" x:Name="btnAg" Tag="Ag,银,107.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="12" Grid.Row="5" x:Name="btnCd" Tag="Cd,镉,112.4" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="13" Grid.Row="5" x:Name="btnIn" Tag="In,铟,114.8" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="14" Grid.Row="5" x:Name="btnSn" Tag="Sn,锡,118.7" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="15" Grid.Row="5" x:Name="btnSb" Tag="Sb,锑,121.8" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="16" Grid.Row="5" x:Name="btnTe" Tag="Te,碲,127.6" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="17" Grid.Row="5" x:Name="btnI" Tag="I,碘,126.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="18" Grid.Row="5" x:Name="btnXe" Tag="Xe,氙,131.3" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="1" Grid.Row="6" x:Name="btnCs" Tag="Cs,铯,132.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="2" Grid.Row="6" x:Name="btnBa" Tag="Ba,钡,137.3" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="3" Grid.Row="9" x:Name="btnLa" Tag="La,镧,138.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="4" Grid.Row="9" x:Name="btnCe" Tag="Ce,铈,140.1" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="5" Grid.Row="9" x:Name="btnPr" Tag="Pr,镨,140.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="6" Grid.Row="9" x:Name="btnNd" Tag="Nd,钕,144.2" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="7" Grid.Row="9" x:Name="btnPm" Tag="Pm,钷,[145]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="8" Grid.Row="9" x:Name="btnSm" Tag="Sm,钐,150.4" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="9" Grid.Row="9" x:Name="btnEu" Tag="Eu,铕,152.0" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="10" Grid.Row="9" x:Name="btnGd" Tag="Gd,钆,157.3" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="11" Grid.Row="9" x:Name="btnTd" Tag="Td,铽,158.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="12" Grid.Row="9" x:Name="btnDy" Tag="Dy,镝,162.5" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="13" Grid.Row="9" x:Name="btnHo" Tag="Ho,钬,164.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="14" Grid.Row="9" x:Name="btnEr" Tag="Er,铒,167.3" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="15" Grid.Row="9" x:Name="btnTm" Tag="Tm,铥,168.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="16" Grid.Row="9" x:Name="btnYb" Tag="Yb,镱,173.0" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="17" Grid.Row="9" x:Name="btnLu" Tag="Lu,镥,175.0" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="4" Grid.Row="6" x:Name="btnHf" Tag="Hf,铪,178.5" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="5" Grid.Row="6" x:Name="btnTa" Tag="Ta,钽,180.9" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="6" Grid.Row="6" x:Name="btnW" Tag="W,钨,183.8" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="7" Grid.Row="6" x:Name="btnRe" Tag="Re,铼,186.2" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="8" Grid.Row="6" x:Name="btnOs" Tag="Os,锇,190.2" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="9" Grid.Row="6" x:Name="btnIr" Tag="Ir,铱,192.2" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="10" Grid.Row="6" x:Name="btnPt" Tag="Pt,铂,195.1" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="11" Grid.Row="6" x:Name="btnAu" Tag="Au,金,197.0" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="12" Grid.Row="6" x:Name="btnHg" Tag="Hg,汞,200.6" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="13" Grid.Row="6" x:Name="btnTl" Tag="Tl,铊,204.4" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="14" Grid.Row="6" x:Name="btnPb" Tag="Pb,铅,207.2" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="15" Grid.Row="6" x:Name="btnBi" Tag="Bi,铋,209.0" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="16" Grid.Row="6" x:Name="btnPo" Tag="Po,钋,[209]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="17" Grid.Row="6" x:Name="btnAt" Tag="At,砹,[210]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="18" Grid.Row="6" x:Name="btnRn" Tag="Rn,氡,[222]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="1" Grid.Row="7" x:Name="btnFr" Tag="Fr,钫,[223]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="2" Grid.Row="7" x:Name="btnRa" Tag="Ra,镭,[226]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="3" Grid.Row="10" x:Name="btnAc" Tag="Ac,锕,[227]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="4" Grid.Row="10" x:Name="btnTh" Tag="Th,钍,232.0" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="5" Grid.Row="10" x:Name="btnPa" Tag="Pa,镤,231.0" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="6" Grid.Row="10" x:Name="btnU" Tag="U,铀,238.0" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="7" Grid.Row="10" x:Name="btnNp" Tag="Np,镎,[237]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="8" Grid.Row="10" x:Name="btnPu" Tag="Pu,钚,[244]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="9" Grid.Row="10" x:Name="btnAm" Tag="Am,镅,[243]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="10" Grid.Row="10" x:Name="btnCm" Tag="Cm,锔,[247]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="11" Grid.Row="10" x:Name="btnBk" Tag="Bk,锫,[247]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="12" Grid.Row="10" x:Name="btnCf" Tag="Cf,锎,[251]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="13" Grid.Row="10" x:Name="btnEs" Tag="Es,锿,[252]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="14" Grid.Row="10" x:Name="btnFm" Tag="Fm,镄,[257]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="15" Grid.Row="10" x:Name="btnMd" Tag="Md,钔,[259]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="16" Grid.Row="10" x:Name="btnNo" Tag="No,锘,[259]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="17" Grid.Row="10" x:Name="btnLr" Tag="Lr,铹,[260]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="4" Grid.Row="7" x:Name="btnRf" Tag="Rf,𬬻,[261]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="5" Grid.Row="7" x:Name="btnDb" Tag="Db,𬭊,[262]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="6" Grid.Row="7" x:Name="btnSg" Tag="Sg,𬭳,[266]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="7" Grid.Row="7" x:Name="btnBh" Tag="Bh,𬭛,[264]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="8" Grid.Row="7" x:Name="btnHs" Tag="Hs,𬭶,[277]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="9" Grid.Row="7" x:Name="btnMt" Tag="Mt,鿏,[268]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="10" Grid.Row="7" x:Name="btnDs" Tag="Ds,𫟼,[271]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="11" Grid.Row="7" x:Name="btnRg" Tag="Rg,𬬭,[272]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="12" Grid.Row="7" x:Name="btnCn" Tag="Cn,鿔,[285]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="13" Grid.Row="7" x:Name="btnNh" Tag="Nh,鉨,[284]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="14" Grid.Row="7" x:Name="btnFl" Tag="Fl,𫓧,[289]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="15" Grid.Row="7" x:Name="btnMc" Tag="Mc,镆,[288]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="16" Grid.Row="7" x:Name="btnLv" Tag="Lv,𫟷,[292]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="17" Grid.Row="7" x:Name="btnTs" Tag="Ts,石田,[291]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="18" Grid.Row="7" x:Name="btnOg" Tag="Og,气奥,[293]" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="2" Content="镧系" Grid.Row="9" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="3" Grid.Row="6" x:Name="btnLaLu" Tag="La~Lu,镧系,---" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="2" Content="锕系" Grid.Row="10" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Button Grid.Column="3" Grid.Row="7" x:Name="btnAcLr" Tag="Ac~Lr,锕系,---" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Grid Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label x:Name="ElementNameBar" Content="H" Height="Auto" Margin="0,0,0,0" Width="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.RowSpan="2" FontWeight="Bold" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+                <ProgressBar x:Name="timeleftProgressBar" Grid.Column="1" Maximum="30000" Value="30000"/>
+                <Label x:Name="timeleftLable" Grid.Column="1" Content="时间还剩30s" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+                <TextBlock TextWrapping="Wrap" Grid.Column="1" Text="请根据元素符号、中文名称或原子量移动鼠标选出该元素在元素周期表中的位置，单击确定" Grid.Row="1" FontSize="{Binding FontSize, ElementName=window}" TextAlignment="Center"/>
+            </Grid>
+            <Label Grid.Column="1" Grid.Row="0" Content="IA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="2" Grid.Row="1" Content="IIA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="3" Grid.Row="3" Content="IIIB" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="4" Grid.Row="3" Content="IVB" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="5" Grid.Row="3" Content="VB" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="6" Grid.Row="3" Content="VIB" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="7" Grid.Row="3" Content="VIIB" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="8" Grid.Row="3" Content="VIII" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" Grid.ColumnSpan="3"/>
+            <Label Grid.Column="11" Grid.Row="3" Content="IB" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="12" Grid.Row="3" Content="IIB" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="13" Grid.Row="1" Content="IIIA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="14" Grid.Row="1" Content="IVA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="15" Grid.Row="1" Content="VA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="16" Grid.Row="1" Content="VIA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="17" Grid.Row="1" Content="VIIA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="18" Grid.Row="0" Content="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
