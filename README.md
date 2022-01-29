@@ -9,7 +9,7 @@
 
 Shining Yang
 
-**Open-Soursed on an ``MIT License`` **
+**📖Open-Soursed on an ``MIT License``**
 ```
 MIT License
 
