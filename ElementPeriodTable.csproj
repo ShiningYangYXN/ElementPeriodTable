@@ -6,11 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="icon.png" />
-  </ItemGroup>
+    <Authors>Shining Yang</Authors>
+    <Product>搞定元素周期表</Product>
+    <Description>一款简单易用的元素周期表助记程序</Description>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageProjectUrl> https://github.com/ShiningYangYXN/ElementPeriodTable</PackageProjectUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+ </PropertyGroup>
 
   <ItemGroup>
     <Content Include="icon.ico" />
@@ -29,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

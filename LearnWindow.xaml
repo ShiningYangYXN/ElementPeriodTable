@@ -29,9 +29,9 @@
             <Button x:Name="ReturnButton" Grid.Column="0" Content="返回游戏" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ReturnButton_Click"/>
             <Button x:Name="AboutButton" Grid.Column="1" Content="关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
         </Grid>
-        <Label Content="鼠标移动到元素所对应的方块，查看介绍，单击方块以弹窗方式显示介绍" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" Margin="0,36,0,0" Grid.RowSpan="2"/>
+        <Label Grid.Row="1" Content="鼠标移动到元素所对应的方块，查看介绍，单击方块以弹窗方式显示介绍" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
 
-        <Grid x:Name="MainGrid" Grid.Row="1" Margin="0,36,0,0" Grid.RowSpan="2">
+        <Grid x:Name="MainGrid" Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -66,7 +66,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition IsEnabled="False" Language="zh-cn" Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="1" Grid.Row="1" x:Name="btnH" Tag="H,氢,1.008" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
             <Button Grid.Column="18" Grid.Row="1" x:Name="btnHe" Tag="He,氦,4.003" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>

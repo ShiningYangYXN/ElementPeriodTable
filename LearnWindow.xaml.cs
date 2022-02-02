@@ -56,7 +56,7 @@ namespace ElementPeriodTable
 
         private void AboutButton_Click(object sender, RoutedEventArgs e)
         {
-            new AboutWindow().Show();
+            new AboutWindow().ShowDialog();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -67,7 +67,7 @@ namespace ElementPeriodTable
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
-            new HelpWindow().Show();
+            new HelpWindow().ShowDialog();
         }
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e)

@@ -9,7 +9,6 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -21,19 +20,17 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="19*"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="20*"/>
-                <ColumnDefinition Width="20*"/>
-                <ColumnDefinition Width="20*"/>
-
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ResetButton" Content="重置" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ResetButton_Click" Grid.ColumnSpan="2"/>
-            <Button x:Name="HelpButton" Grid.Column="2" Content="等级说明" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
-            <Button x:Name="LearnButton" Grid.Column="3" Content="学习" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="LearnButton_Click"/>
-            <Button x:Name="AboutButton" Grid.Column="4" Content="关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
+            <Button x:Name="ResetButton" Grid.Column="0" Content="重置" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ResetButton_Click" />
+            <Button x:Name="HelpButton" Grid.Column="1" Content="等级说明" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
+            <Button x:Name="LearnButton" Grid.Column="2" Content="学习" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="LearnButton_Click"/>
+            <Button x:Name="AboutButton" Grid.Column="3" Content="关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
         </Grid>
-        <Grid Grid.ColumnSpan="2" Margin="0,36,0,0" Grid.RowSpan="2">
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -48,7 +45,7 @@
 
         </Grid>
 
-        <Grid x:Name="MainGrid" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,36,0,0" Grid.RowSpan="2">
+        <Grid x:Name="MainGrid" Grid.Row="2" >
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -57,10 +54,10 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition Height="*"/>
+                <RowDefinition/>
                 <RowDefinition Height="0.5*"/>
                 <RowDefinition/>
-                <RowDefinition Height="*"/>
+                <RowDefinition/>
                 <RowDefinition Height="0.5*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -83,7 +80,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition IsEnabled="False" Language="zh-cn" Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="1" Grid.Row="1" x:Name="btnH" Tag="H,氢,1.008" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>
             <Button Grid.Column="18" Grid.Row="1" x:Name="btnHe" Tag="He,氦,4.003" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" FontSize="{Binding FontSize, ElementName=window}"/>

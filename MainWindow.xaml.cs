@@ -25,7 +25,6 @@ namespace ElementPeriodTable
             {
                 if (btn is Button) btns.Add((Button)btn);
             }
-            RefreshContents();
         }
         private void RefreshContents()
         {
@@ -66,16 +65,17 @@ namespace ElementPeriodTable
         {
             string elementname="";
             Random rnd = new ();
+            
             switch(Properties.Settings.Default.Level)
             {
                 case 0 or 1:
                     switch(rnd.Next (2))
                     {
                         case 0:
-                            elementname = btns[rnd.Next(0, 57)].Tag.ToString().Split(",")[rnd.Next(2)];
+                            elementname = btns[rnd.Next(0, 56)].Tag.ToString().Split(",")[rnd.Next(2)];
                             break;
                         case 1:
-                            elementname = btns[rnd.Next(71, 89)].Tag.ToString().Split(",")[rnd.Next(2)];
+                            elementname = btns[rnd.Next(72, 88)].Tag.ToString().Split(",")[rnd.Next(2)];
                             break;
                         default:
                             break;
@@ -86,7 +86,7 @@ namespace ElementPeriodTable
 
                     break;
                 case 4:
-                    switch (rnd.Next(4))
+                    switch (rnd.Next(2))
                     {
                         case 0:
                             elementname = btns[rnd.Next(120)].Tag.ToString().Split(",")[rnd.Next(2)];
@@ -117,6 +117,7 @@ namespace ElementPeriodTable
         }
         private void NewGame()
         {
+            FillBtns();
             GetNewElement();
             switch (Properties.Settings.Default.Level)
             {
@@ -158,9 +159,13 @@ namespace ElementPeriodTable
 
             if (timeleft == 0)
             {
+                Button rightBtn = new();
                 timer.Stop();
-                MessageBox.Show("超时未答题，积分-10\n以后手速要快哦","超时未答");
-                Properties.Settings.Default.Score -= 10;
+                foreach (Button button in btns)
+                {
+                    if (button.Tag.ToString().Split(",")[0] == ElementNameBar.Content.ToString() || button.Tag.ToString().Split(",")[1] == ElementNameBar.Content.ToString() || button.Tag.ToString().Split(",")[2] == ElementNameBar.Content.ToString()) rightBtn = button;
+                }
+                MessageBox.Show("超时未答题\n以后手速要快啊！\n"+ElementNameBar.Content.ToString()+"是"+rightBtn.Content.ToString()+"号元素", "超时未答");
                 NewGame();
             }
             else
@@ -173,9 +178,8 @@ namespace ElementPeriodTable
 
         private void Btn_Click(object sender, RoutedEventArgs e)
         {
-            timer.Start();
 
-
+            timer.Stop();
             Button btn = (Button)sender;
 
             if (btn.Tag.ToString().Split(",")[0]==ElementNameBar.Content.ToString() || btn.Tag.ToString().Split(",")[1] == ElementNameBar.Content.ToString() || btn.Tag.ToString().Split(",")[2] == ElementNameBar.Content.ToString())
@@ -185,16 +189,16 @@ namespace ElementPeriodTable
                 MessageBox.Show("恭喜你，答对了，积分+10!\n又记住了一个元素！", "回答正确");
                 switch (Properties.Settings.Default.Score)
                 {
-                    case 10 or 20:
+                    case 10:
                         MessageBox.Show("恭喜！你已晋级LV1，获得“努力向前”称号！\n当前等级每题限时25s\n测试范围：基础区（所有镧系、锕系以外的非人造元素）", "晋级提醒");
                         break;
-                    case 100 or 110:
+                    case 100:
                         MessageBox.Show("恭喜！你已晋级LV2，获得“小有成就”称号！\n当前等级每题限时20s\n测试范围：全表", "晋级提醒");
                         break;
-                    case 1000 or 1010:
+                    case 1000:
                         MessageBox.Show("恭喜！你已晋级LV3，获得“聪明绝顶”称号！\n当前等级每题限时15s\n测试范围：全表", "晋级提醒");
                         break;
-                    case 10000 or 10010:
+                    case 10000:
                         MessageBox.Show("恭喜！你已晋级最高等级LV4，获得“顶级大师”称号！\n当前等级每题限时10s\n解锁原子量测试", "晋级提醒");
                         break;
                     default: break;
@@ -202,27 +206,17 @@ namespace ElementPeriodTable
             }
             else
             {
-                Properties.Settings.Default.Score -= 20;
-                MessageBox.Show("很遗憾，答错了，积分-20!\n以后要多加巩固啊！", "回答错误");
-                switch (Properties.Settings.Default.Score)
+                Button rightBtn = new();
+            foreach (Button button in  btns)
                 {
-                    case  0 or 80 or 90 or 980 or 990 or 9980 or 9990:
-                        MessageBox.Show("糟糕！掉级了\n要继续努力哦", "掉级提醒");
-                           break;
-                    default: break;
+                    if (button.Tag.ToString().Split(",")[0] == ElementNameBar.Content.ToString() || button.Tag.ToString().Split(",")[1] == ElementNameBar.Content.ToString() || button.Tag.ToString().Split(",")[2] == ElementNameBar.Content.ToString()) rightBtn=button ;
                 }
-            }
-
-            if (Properties.Settings.Default.Score<0)
-            {
-                MessageBox.Show("积分扣光了，再来一局吧","游戏结束");
-                Properties.Settings.Default.Score = 0;
-                Properties.Settings.Default.Level = 0;
+            MessageBox.Show("很遗憾，答错了\n以后要多加巩固啊！\n" + ElementNameBar.Content.ToString() + "是" + rightBtn.Content.ToString() + "号元素", "回答错误");
+                
             }
 
 
             RefreshContents();
-            FillBtns();
             NewGame();
         }
 
@@ -248,41 +242,10 @@ namespace ElementPeriodTable
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            RefreshContents();
             SetFontSize();
-            GetNewElement();
             FillBtns();
-            switch (Properties.Settings.Default.Level)
-            {
-                case 0:
-                    timeleft = 30;
-                    timeleftProgressBar.Maximum = 30;
-                    timeleftProgressBar.Value = 30;
-                    break;
-                case 1:
-                    timeleft = 25;
-                    timeleftProgressBar.Maximum = 25;
-                    timeleftProgressBar.Value = 25;
-                    break;
-                case 2:
-                    timeleft = 20;
-                    timeleftProgressBar.Maximum = 20;
-                    timeleftProgressBar.Value = 20;
-                    break;
-                case 3:
-                    timeleft = 15;
-                    timeleftProgressBar.Maximum = 15;
-                    timeleftProgressBar.Value = 15;
-                    break;
-                case 4:
-                    timeleft = 10;
-                    timeleftProgressBar.Maximum = 10;
-                    timeleftProgressBar.Value = 10;
-                    break;
-                default:
-                    break;
-            }
-
-            timer.Start();
+            NewGame();
         }
 
 
@@ -291,19 +254,20 @@ namespace ElementPeriodTable
         {
             if (MessageBox.Show("重置游戏会导致等级和积分清零哦\n确定要重置吗？", "重置确认", button: MessageBoxButton.OKCancel) == MessageBoxResult.OK)
             {
+                timer.Stop();
                 Properties.Settings.Default.Score = 0;
                 Properties.Settings.Default.Level = 0;
-                lvLabel.Content = "🏆" + Properties.Settings.Default.Level.ToString();
-                scrLabel.Content = "💎" + Properties.Settings.Default.Score.ToString();
+                lvLabel.Content = "🏆0|默默无闻";
+                scrLabel.Content = "💎0";
+                NewGame();
             }
-            else { }
+            
         }
 
         private void window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Properties.Settings.Default.Save();
-            if (MessageBox.Show("关闭程序后等级和积分会自动保存\n确定要关闭吗？", "关闭确认", button: MessageBoxButton.OKCancel) == MessageBoxResult.OK) { }
-            else { e.Cancel = true; }
+            if (!(MessageBox.Show("关闭程序后等级和积分会自动保存\n确定要关闭吗？", "关闭确认", button: MessageBoxButton.OKCancel) == MessageBoxResult.OK)) e.Cancel = true; 
         }
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
@@ -327,6 +291,7 @@ namespace ElementPeriodTable
             this.Hide();
             new LearnWindow().ShowDialog();
             this.Show();
+            timer.Start();
         }
 
     }
