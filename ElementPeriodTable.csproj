@@ -15,11 +15,19 @@
  </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="SplashScreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="SplashScreen.png" />
   </ItemGroup>
 
   <ItemGroup>

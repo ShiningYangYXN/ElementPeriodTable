@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\
+C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\
 ElementPeriodTable
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\projects\ElementPeriodTable\App.xaml
-42013542200
+C:\projects\ElementPeriodTable\App.xaml
+5-1747676108
 1-1606303973
-9-894420758
+1034918954
 1941142463650
-AboutWindow.xaml;HelpWindow.xaml;LearnWindow.xaml;MainWindow.xaml;
-
+AboutWindow.xaml;HelpWindow.xaml;LearnWindow.xaml;MainWindow.xaml;Window1.xaml;
+splashscreen.png
 False
 

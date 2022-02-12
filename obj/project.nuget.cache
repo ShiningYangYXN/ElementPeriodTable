@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4bgi4CngVuQ2lYe9wyLQjuJmYauhwmsLTH4wEfYosL4xkt2U8KLOHwLX/QQ3ocw93TGnKbujiCwP+7Bsm/1S1g==",
+  "dgSpecHash": "wSwkSPRFlhmGfExyOf3QSAVuG0j7QizWaOUiMC/y/IOrXEAnQGfbSBJ5wnFydXBDCDr4tyjkY3qZLPSfh/7iLw==",
   "success": true,
-  "projectFilePath": "D:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj",
+  "projectFilePath": "C:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
+using System.Windows.Documents;
 
 namespace ElementPeriodTable
 {
@@ -22,6 +24,11 @@ namespace ElementPeriodTable
         {
             this.FontSize = this.ActualHeight / 20;
 
+        }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

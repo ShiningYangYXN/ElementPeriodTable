@@ -226,13 +226,10 @@ namespace ElementPeriodTable
 
         private void Btn_MouseEnter(object sender, MouseEventArgs e)
         {
-            Button btn = (Button)sender;
-            btn.Content = ElementNameBar.Content;
         }
 
         private void Btn_MouseLeave(object sender, MouseEventArgs e)
         {
-            FillBtns();
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -294,5 +291,15 @@ namespace ElementPeriodTable
             timer.Start();
         }
 
+        private void Btn_RhtClick(object sender, MouseButtonEventArgs e)
+        {
+            Button btn = (Button)sender;
+            MessageBox.Show("元素符号："+btn.Tag.ToString().Split(",")[0]+ "\n原子序数：" + btn.Content+ "\n中文名：" + btn.Tag.ToString().Split(",")[1]+ "\n原子量：" + btn.Tag.ToString().Split(",")[2], "翻开提示");
+        }
+
+        private void SelectButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

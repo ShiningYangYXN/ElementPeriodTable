@@ -18,9 +18,15 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Image Source="/icon.png"/>
+        
         <Label Grid.Column="0" Grid.Row="1" Content="搞定元素周期表(永久开源免费)" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="Auto" Height="Auto" VerticalAlignment="Stretch" FontSize="{Binding FontSize, ElementName=window}"/>
-        <Label Grid.Column="0" Grid.Row="2" Content="开发：Shining Yang" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="Auto" Height="Auto" VerticalAlignment="Stretch" FontSize="{Binding FontSize, ElementName=window}"/>
-        <Label Grid.Column="0" Grid.Row="3" Content="GitHub repo: ShiningYangYXN/ElementPeriodTable" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="Auto" Height="Auto" VerticalAlignment="Stretch" FontSize="{Binding FontSize, ElementName=window}"/>
+        <Label Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="Auto" Height="Auto" VerticalAlignment="Stretch" FontSize="{Binding FontSize, ElementName=window}">
+            <Hyperlink NavigateUri="https://github.com/ShiningYangYXN" Click="Hyperlink_Click">开发：Shining Yang</Hyperlink>
+        </Label>
+
+        <Label Grid.Column="0" Grid.Row="3"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="Auto" Height="Auto" VerticalAlignment="Stretch" FontSize="{Binding FontSize, ElementName=window}">
+            <Hyperlink NavigateUri="https://github.com/ShiningYangYXN/ElementPeriodTable" Click="Hyperlink_Click">GitHub repo: ShiningYangYXN/ElementPeriodTable</Hyperlink>
+        </Label>
         <Label Grid.Column="0" Grid.Row="4" Content="一款简单易用的元素周期表助记程序" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="Auto" Height="Auto" VerticalAlignment="Stretch" FontSize="{Binding FontSize, ElementName=window}"/>
 
     </Grid>

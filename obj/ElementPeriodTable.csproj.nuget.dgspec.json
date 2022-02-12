@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj": {}
+    "C:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj": {}
   },
   "projects": {
-    "D:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj": {
+    "C:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj",
+        "projectUniqueName": "C:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj",
         "projectName": "ElementPeriodTable",
-        "projectPath": "D:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj",
+        "projectPath": "C:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj",
         "packagesPath": "C:\\Users\\yxnsh\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\ElementPeriodTable\\obj\\",
+        "outputPath": "C:\\projects\\ElementPeriodTable\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\VisualStudio2022-shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\yxnsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

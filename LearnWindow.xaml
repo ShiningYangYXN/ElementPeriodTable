@@ -47,7 +47,7 @@
                 <RowDefinition Height="0.5*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -223,6 +223,13 @@
             <Label Grid.Column="16" Grid.Row="1" Content="VIA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
             <Label Grid.Column="17" Grid.Row="1" Content="VIIA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
             <Label Grid.Column="18" Grid.Row="0" Content="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="0" Grid.Row="2" Content="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="0" Grid.Row="3" Content="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="0" Grid.Row="4" Content="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="0" Grid.Row="5" Content="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="0" Grid.Row="6" Content="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
+            <Label Grid.Column="0" Grid.Row="7" Content="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
 
         </Grid>
 
