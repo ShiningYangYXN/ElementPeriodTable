@@ -17,6 +17,7 @@ namespace ElementPeriodTable
         public MainWindow()
         {
             InitializeComponent();
+            Properties.Settings.Default.Reload();
             timer = new System.Windows.Threading.DispatcherTimer();
             timer.Tick += new EventHandler(Timer_Tick);
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -82,9 +83,12 @@ namespace ElementPeriodTable
             {
                 if (str.Contains('-'))
                 {
-                    for (int i = Convert.ToInt32(str.Split("-")[0]) - 1; i < Convert.ToInt32(str.Split("-")[1]); i++)
+                    int min = Convert.ToInt32(str.Split("-")[0].ToString()) -1;
+                    int max = Convert.ToInt32(str.Split("-")[1].ToString());
+                    for (int i = min; i < max; i++)
                     {
-                        selected_btns.Add(btns[i]);
+                        try { selected_btns.Add(btns[i]); }
+                        catch { break; }
                     }
 
                 }
@@ -183,16 +187,16 @@ namespace ElementPeriodTable
                 switch (Properties.Settings.Default.Score)
                 {
                     case 10:
-                        MessageBox.Show("恭喜！你已晋级LV1，获得“努力向前”称号！\n当前等级每题限时25s\n测试范围：基础区（所有镧系、锕系以外的非人造元素）", "晋级提醒");
+                        MessageBox.Show("恭喜！你已晋级LV1，获得“努力向前”称号！\n当前等级每题限时25s", "晋级提醒");
                         break;
                     case 100:
-                        MessageBox.Show("恭喜！你已晋级LV2，获得“小有成就”称号！\n当前等级每题限时20s\n测试范围：全表", "晋级提醒");
+                        MessageBox.Show("恭喜！你已晋级LV2，获得“小有成就”称号！\n当前等级每题限时20s", "晋级提醒");
                         break;
                     case 1000:
-                        MessageBox.Show("恭喜！你已晋级LV3，获得“聪明绝顶”称号！\n当前等级每题限时15s\n测试范围：全表", "晋级提醒");
+                        MessageBox.Show("恭喜！你已晋级LV3，获得“聪明绝顶”称号！\n当前等级每题限时15s", "晋级提醒");
                         break;
                     case 10000:
-                        MessageBox.Show("恭喜！你已晋级最高等级LV4，获得“顶级大师”称号！\n当前等级每题限时10s\n解锁原子量测试", "晋级提醒");
+                        MessageBox.Show("恭喜！你已晋级最高等级LV4，获得“顶级大师”称号！\n当前等级每题限时10s\n你解锁了原子量测试", "晋级提醒");
                         break;
                     default: break;
                 }
@@ -245,9 +249,7 @@ namespace ElementPeriodTable
             if (MessageBox.Show("重置游戏会导致等级和积分清零哦\n确定要重置吗？", "重置确认", button: MessageBoxButton.OKCancel) == MessageBoxResult.OK)
             {
                 timer.Stop();
-                Properties.Settings.Default.Score = 0;
-                Properties.Settings.Default.Level = 0;
-                lvLabel.Content = "🏆0|默默无闻";
+                Properties.Settings.Default.Reset();                lvLabel.Content = "🏆0|默默无闻";
                 scrLabel.Content = "💎0";
                 NewGame();
             }
@@ -263,6 +265,7 @@ namespace ElementPeriodTable
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
+            Properties.Settings.Default.URL = "https://github.com/ShiningYangYXN/ElementPeriodTable/blob/main/README.md";
             new HelpWindow().ShowDialog();
             timer.Start();
         }

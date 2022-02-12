@@ -4,57 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ElementPeridTable"
+xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"        
         mc:Ignorable="d"
-        Title="等级说明" Height="450" Width="800" Icon="/icon.png" WindowStartupLocation="CenterOwner" Loaded="window_Loaded" SizeChanged="window_SizeChanged">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Label Content="等级" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1" Grid.Column="1"/>
-        <Label Content="分值" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1" Grid.Column="2"/>
-        <Label Content="称号" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1" Grid.Column="3"/>
-        <Label Content="考察范围" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1" Grid.Column="4"/>
-        <Label Content="限时" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1" Grid.Column="5"/>
-        <Label Content="LV0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="2" Grid.Column="1"/>
-        <Label Content="0~10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="2" Grid.Column="2"/>
-        <Label Content="默默无闻" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="2" Grid.Column="3"/>
-        <Label Content="30s" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="2" Grid.Column="5"/>
-        <Label Content="LV1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="3" Grid.Column="1"/>
-        <Label Content="10~100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="3" Grid.Column="2"/>
-        <Label Content="努力向前" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="3" Grid.Column="3"/>
-        <Label Content="25s" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="3" Grid.Column="5"/>
-        <TextBlock TextWrapping="Wrap" Grid.Column="4" Grid.Row="2" Text="基础区（所有镧系、锕系以外的非人造元素）"  FontSize="{Binding FontSize, ElementName=window}" TextAlignment="Center" Grid.RowSpan="2" VerticalAlignment="Center"/>
-        <Label Content="LV2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="4" Grid.Column="1"/>
-        <Label Content="100~1000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="4" Grid.Column="2"/>
-        <Label Content="小有成就" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="4" Grid.Column="3"/>
-        <Label Content="20s" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="4" Grid.Column="5"/>
-        <Label Content="LV3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="5" Grid.Column="1"/>
-        <Label Content="1000~10000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="5" Grid.Column="2"/>
-        <Label Content="聪明绝顶" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="5" Grid.Column="3"/>
-        <Label Content="15s" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="5" Grid.Column="5"/>
-        <Label Content="全表" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="4" Grid.Column="4" Grid.RowSpan="2"/>
-        <Label Content="LV4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="6" Grid.Column="1"/>
-        <Label Content="≥10000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="6" Grid.Column="2"/>
-        <Label Content="顶级大师" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="6" Grid.Column="3"/>
-        <Label Content="10s" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="6" Grid.Column="5"/>
-        <Label Content="全表（含原子量）" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Row="6" Grid.Column="4"/>
-
-    </Grid>
-
+        Title="帮助" Height="450" Width="800" Icon="/icon.png" WindowStartupLocation="CenterOwner" Loaded="window_Loaded" SizeChanged="window_SizeChanged">
+    <wv2:WebView2 x:Name="WV2" Source="https://github.com/ShiningYangYXN/ElementPeriodTable/blob/main/README.md" Initialized="WV2_Initialized"/>
 
 </Window>

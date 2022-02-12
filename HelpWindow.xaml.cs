@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace ElementPeriodTable
 {
@@ -14,14 +15,15 @@ namespace ElementPeriodTable
 
         private void window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.FontSize = this.ActualHeight / 40;
         }
 
         private void window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            this.FontSize = this.ActualHeight / 40;
         }
 
-
+        private void WV2_Initialized(object sender, EventArgs e)
+        {
+            WV2.Source = new Uri(Properties.Settings.Default.URL);
+        }
     }
 }

@@ -28,7 +28,9 @@ namespace ElementPeriodTable
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-            
+            Hyperlink hlnk = (Hyperlink)sender;
+            Properties.Settings.Default.URL = hlnk.NavigateUri.AbsoluteUri;
+            new HelpWindow().Show();
         }
     }
 }

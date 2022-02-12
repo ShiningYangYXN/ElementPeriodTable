@@ -27,7 +27,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="ResetButton" Grid.Column="0" Content="重置" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ResetButton_Click" />
-            <Button x:Name="HelpButton" Grid.Column="1" Content="等级说明" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
+            <Button x:Name="HelpButton" Grid.Column="1" Content="帮助" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
             <Button x:Name="LearnButton" Grid.Column="2" Content="学习" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="LearnButton_Click"/>
             <Button x:Name="AboutButton" Grid.Column="3" Content="关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
             <Button x:Name="SelectButton" Grid.Column="4" Content="测试范围" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="SelectButton_Click"/>

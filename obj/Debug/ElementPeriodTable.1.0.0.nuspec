@@ -8,7 +8,9 @@
     <projectUrl>https://github.com/ShiningYangYXN/ElementPeriodTable</projectUrl>
     <description>一款简单易用的元素周期表助记程序</description>
     <dependencies>
-      <group targetFramework="net6.0-windows7.0" />
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="Microsoft.Web.WebView2" version="1.0.1108.44" exclude="Build,Analyzers" />
+      </group>
     </dependencies>
     <frameworkReferences>
       <group targetFramework="net6.0-windows7.0">

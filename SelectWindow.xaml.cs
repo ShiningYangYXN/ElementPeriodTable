@@ -47,7 +47,7 @@ namespace ElementPeriodTable
                     foreach (string s in list)
                     {
                         if (!s.Contains("-") && Convert.ToInt32(s) >= 1 && Convert.ToInt32(s) <= 120) return true;
-                        else if (s.Contains("-") && s.Split("-").Length == 2 && Convert.ToInt32(s.Split("-")[0]) >= 1 && Convert.ToInt32(s.Split("-")[0]) <= 120 && Convert.ToInt32(s.Split("-")[1]) >= 1 && Convert.ToInt32(s.Split("-")[1]) <= 120) return true;
+                        else if (s.Contains("-") && s.Split("-").Length == 2 && Convert.ToInt32(s.Split("-")[0]) >= 1 && Convert.ToInt32(s.Split("-")[0]) <= 120 && Convert.ToInt32(s.Split("-")[1]) >= 1 && Convert.ToInt32(s.Split("-")[1]) <= 120&& Convert.ToInt32(s.Split("-")[0])< Convert.ToInt32(s.Split("-")[1])) return true;
                         else return false;
                     }
                     return false;
