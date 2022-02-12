@@ -13,8 +13,7 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\yxnsh\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\yxnsh\\.nuget\\packages",
-      "D:\\VisualStudio2022-shared\\NuGetPackages"
+      "C:\\Users\\yxnsh\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,

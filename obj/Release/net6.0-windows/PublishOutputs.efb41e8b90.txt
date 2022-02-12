@@ -1,0 +1,11 @@
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\ElementPeriodTable.exe
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\runtimes\win-x86\native\WebView2Loader.dll
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\runtimes\win-x64\native\WebView2Loader.dll
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\runtimes\win-arm64\native\WebView2Loader.dll
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\ElementPeriodTable.dll
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\ElementPeriodTable.deps.json
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\ElementPeriodTable.runtimeconfig.json
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\ElementPeriodTable.pdb
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\Microsoft.Web.WebView2.Core.dll
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\Microsoft.Web.WebView2.WinForms.dll
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-noruntime\Microsoft.Web.WebView2.Wpf.dll
