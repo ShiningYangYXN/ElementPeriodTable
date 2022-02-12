@@ -8,5 +8,8 @@
     <Setting Name="Score" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="Selected" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1-118</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

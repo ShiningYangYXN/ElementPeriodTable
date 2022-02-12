@@ -54,3 +54,5 @@ C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\refint\ElementPeriodTabl
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\ElementPeriodTable.pdb
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\ElementPeriodTable.genruntimeconfig.cache
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\ref\ElementPeriodTable.dll
+C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\SelectWindow.g.cs
+C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\SelectWindow.baml

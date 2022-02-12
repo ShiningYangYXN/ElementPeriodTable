@@ -46,5 +46,17 @@ namespace ElementPeriodTable.Properties {
                 this["Score"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1-118")]
+        public string Selected {
+            get {
+                return ((string)(this["Selected"]));
+            }
+            set {
+                this["Selected"] = value;
+            }
+        }
     }
 }

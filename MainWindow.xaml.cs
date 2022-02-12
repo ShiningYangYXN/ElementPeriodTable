@@ -63,46 +63,39 @@ namespace ElementPeriodTable
         }
         private void GetNewElement()
         {
-            string elementname="";
-            Random rnd = new ();
-            
-            switch(Properties.Settings.Default.Level)
+            string elementname = "Unknown";
+            Random rnd = new();
+            List<string> selected = new();
+            List<Button> selected_btns = new();
+            if (Properties.Settings.Default.Selected.Contains(','))
             {
-                case 0 or 1:
-                    switch(rnd.Next (2))
-                    {
-                        case 0:
-                            elementname = btns[rnd.Next(0, 56)].Tag.ToString().Split(",")[rnd.Next(2)];
-                            break;
-                        case 1:
-                            elementname = btns[rnd.Next(72, 88)].Tag.ToString().Split(",")[rnd.Next(2)];
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case 2 or 3:
-                    elementname = btns[rnd.Next(120)].Tag.ToString().Split(",")[rnd.Next(2)];
-
-                    break;
-                case 4:
-                    switch (rnd.Next(2))
-                    {
-                        case 0:
-                            elementname = btns[rnd.Next(120)].Tag.ToString().Split(",")[rnd.Next(2)];
-                            break;
-                        case 1:
-                            elementname = btns[rnd.Next(118)].Tag.ToString().Split(",")[2];
-
-                            break;
-                        default:
-                            break;
-
-                    }
-
-                    break;
-                default:break;
+                foreach (string str in Properties.Settings.Default.Selected.Split(","))
+                {
+                    selected.Add(str);
+                }
             }
+            else
+            {
+                selected.Add(Properties.Settings.Default.Selected);
+            }
+            foreach (string str in selected)
+            {
+                if (str.Contains('-'))
+                {
+                    for (int i = Convert.ToInt32(str.Split("-")[0]) - 1; i < Convert.ToInt32(str.Split("-")[1]); i++)
+                    {
+                        selected_btns.Add(btns[i]);
+                    }
+
+                }
+                else
+                {
+                    selected_btns.Add(btns[Convert.ToInt32(str) - 1]);
+                }
+            }
+            if (Properties.Settings.Default.Level == 4) elementname = selected_btns[rnd.Next(selected_btns.Count)].Tag.ToString().Split(",")[rnd.Next(3)];
+            else elementname = selected_btns[rnd.Next(selected_btns.Count)].Tag.ToString().Split(",")[rnd.Next(2)];
+            
             ElementNameBar.Content = elementname;
 
         }
@@ -264,7 +257,7 @@ namespace ElementPeriodTable
         private void window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Properties.Settings.Default.Save();
-            if (!(MessageBox.Show("关闭程序后等级和积分会自动保存\n确定要关闭吗？", "关闭确认", button: MessageBoxButton.OKCancel) == MessageBoxResult.OK)) e.Cancel = true; 
+            if (!(MessageBox.Show("关闭程序后测试范围、等级和积分会自动保存\n确定要关闭吗？", "关闭确认", button: MessageBoxButton.OKCancel) == MessageBoxResult.OK)) e.Cancel = true; 
         }
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
@@ -299,7 +292,9 @@ namespace ElementPeriodTable
 
         private void SelectButton_Click(object sender, RoutedEventArgs e)
         {
-
+            timer.Stop();
+            new SelectWindow().ShowDialog();
+            timer.Start();
         }
     }
 }

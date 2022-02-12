@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\projects\ElementPeriodTable\App.xaml
-42013542200
+51098417570
 1-1606303973
-71698797693
+8-111555979
 1941142463650
-AboutWindow.xaml;HelpWindow.xaml;LearnWindow.xaml;MainWindow.xaml;
+AboutWindow.xaml;HelpWindow.xaml;LearnWindow.xaml;MainWindow.xaml;SelectWindow.xaml;
 splashscreen.png
 False
 
