@@ -58,17 +58,5 @@ namespace ElementPeriodTable.Properties {
                 this["Selected"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://shiningyangyxn.github.io/ElementPeriodTable/")]
-        public string URL {
-            get {
-                return ((string)(this["URL"]));
-            }
-            set {
-                this["URL"] = value;
-            }
-        }
     }
 }

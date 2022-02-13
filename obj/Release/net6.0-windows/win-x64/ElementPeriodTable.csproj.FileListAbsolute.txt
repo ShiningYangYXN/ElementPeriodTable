@@ -1,13 +1,8 @@
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\runtimes\win-x64\native\WebView2Loader.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\ElementPeriodTable.exe
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\ElementPeriodTable.deps.json
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\ElementPeriodTable.runtimeconfig.json
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\ElementPeriodTable.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\ElementPeriodTable.pdb
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\Microsoft.Web.WebView2.Core.dll
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\Microsoft.Web.WebView2.WinForms.dll
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\Microsoft.Web.WebView2.Wpf.dll
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\WebView2Loader.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\Microsoft.CSharp.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\Microsoft.VisualBasic.Core.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\Microsoft.Win32.Primitives.dll
@@ -507,7 +502,6 @@ C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\zh-Hant\Window
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\zh-Hant\WindowsFormsIntegration.resources.dll
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\ElementPeriodTable.csproj.AssemblyReference.cache
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\AboutWindow.g.cs
-C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\HelpWindow.g.cs
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\LearnWindow.g.cs
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\MainWindow.g.cs
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\SelectWindow.g.cs
@@ -516,7 +510,6 @@ C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\ElementPeriodT
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\ElementPeriodTable_MarkupCompile.cache
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\ElementPeriodTable_MarkupCompile.lref
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\AboutWindow.baml
-C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\HelpWindow.baml
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\LearnWindow.baml
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\MainWindow.baml
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\SelectWindow.baml

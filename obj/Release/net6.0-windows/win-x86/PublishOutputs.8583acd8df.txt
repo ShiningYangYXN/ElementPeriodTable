@@ -1,6 +1,5 @@
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\README.md
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\ElementPeriodTable.exe
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\runtimes\win-x86\native\WebView2Loader.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\ElementPeriodTable.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\ElementPeriodTable.deps.json
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\ElementPeriodTable.runtimeconfig.json
@@ -503,7 +502,3 @@ C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\zh-Han
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\zh-Hant\UIAutomationTypes.resources.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\zh-Hant\WindowsBase.resources.dll
 C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\zh-Hant\WindowsFormsIntegration.resources.dll
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\Microsoft.Web.WebView2.Core.dll
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\Microsoft.Web.WebView2.WinForms.dll
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\Microsoft.Web.WebView2.Wpf.dll
-C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\publish\win-x86\WebView2Loader.dll

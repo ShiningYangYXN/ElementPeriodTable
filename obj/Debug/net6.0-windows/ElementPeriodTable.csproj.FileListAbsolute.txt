@@ -33,7 +33,6 @@ C:\projects\ElementPeriodTable\bin\Debug\net6.0-windows\ElementPeriodTable.dll
 C:\projects\ElementPeriodTable\bin\Debug\net6.0-windows\ElementPeriodTable.pdb
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\ElementPeriodTable.csproj.AssemblyReference.cache
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\AboutWindow.g.cs
-C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\HelpWindow.g.cs
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\LearnWindow.g.cs
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\SelectWindow.g.cs
@@ -42,7 +41,6 @@ C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\ElementPeriodTable_Conte
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\ElementPeriodTable_MarkupCompile.cache
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\ElementPeriodTable_MarkupCompile.lref
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\AboutWindow.baml
-C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\HelpWindow.baml
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\LearnWindow.baml
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\MainWindow.baml
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\SelectWindow.baml

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -263,8 +265,7 @@ namespace ElementPeriodTable
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
-            Properties.Settings.Default.URL = "https://shiningyangyxn.github.io/ElementPeriodTable/";
-            new HelpWindow().ShowDialog();
+            Process.Start("explorer.exe", "https://shiningyangyxn.github.io/ElementPeriodTable/");
             timer.Start();
         }
 

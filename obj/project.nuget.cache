@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P28jZwCitAh5hrRNZC6O0Xe//w0k8XKVnmQ2SpUH6XuN0jsULfJ2z2v1fgHl1QM/RSILiV/ooGZzrNNYGGbP6A==",
+  "dgSpecHash": "wSwkSPRFlhmGfExyOf3QSAVuG0j7QizWaOUiMC/y/IOrXEAnQGfbSBJ5wnFydXBDCDr4tyjkY3qZLPSfh/7iLw==",
   "success": true,
   "projectFilePath": "C:\\projects\\ElementPeriodTable\\ElementPeriodTable.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\yxnsh\\.nuget\\packages\\microsoft.web.webview2\\1.0.1108.44\\microsoft.web.webview2.1.0.1108.44.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

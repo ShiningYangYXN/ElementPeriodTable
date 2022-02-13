@@ -9,7 +9,6 @@
     ".NETCoreApp,Version=v6.0/win-x86": {
       "ElementPeriodTable/1.0.0": {
         "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.1108.44",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x86": "6.0.1",
           "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x86": "6.0.1"
         },
@@ -1074,27 +1073,6 @@
             "fileVersion": "6.0.121.56707"
           }
         }
-      },
-      "Microsoft.Web.WebView2/1.0.1108.44": {
-        "runtime": {
-          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
-            "assemblyVersion": "1.0.1108.44",
-            "fileVersion": "1.0.1108.44"
-          },
-          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
-            "assemblyVersion": "1.0.1108.44",
-            "fileVersion": "1.0.1108.44"
-          },
-          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
-            "assemblyVersion": "1.0.1108.44",
-            "fileVersion": "1.0.1108.44"
-          }
-        },
-        "native": {
-          "runtimes/win-x86/native/WebView2Loader.dll": {
-            "fileVersion": "1.0.1108.44"
-          }
-        }
       }
     }
   },
@@ -1113,13 +1091,6 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
-    },
-    "Microsoft.Web.WebView2/1.0.1108.44": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pVXvQG43qSbAmrR07M4LF/5bm9b29Kp348qOi6lX1vy6+aZBrAOH6RnaDZdaghtshOugi2rK/GVkTpRAb0bbIg==",
-      "path": "microsoft.web.webview2/1.0.1108.44",
-      "hashPath": "microsoft.web.webview2.1.0.1108.44.nupkg.sha512"
     }
   },
   "runtimes": {

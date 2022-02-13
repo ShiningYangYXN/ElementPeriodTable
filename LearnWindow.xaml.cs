@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -67,8 +68,7 @@ namespace ElementPeriodTable
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.URL = "https://github.com/ShiningYangYXN/ElementPeriodTable/blob/main/README.md";
-            new HelpWindow().ShowDialog();
+            Process.Start("explorer.exe", "https://shiningyangyxn.github.io/ElementPeriodTable/");
         }
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
