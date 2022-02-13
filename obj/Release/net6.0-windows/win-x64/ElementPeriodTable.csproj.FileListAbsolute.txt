@@ -531,3 +531,4 @@ C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\refint\Element
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\ElementPeriodTable.pdb
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\ElementPeriodTable.genruntimeconfig.cache
 C:\projects\ElementPeriodTable\obj\Release\net6.0-windows\win-x64\ref\ElementPeriodTable.dll
+C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\README.md
