@@ -67,6 +67,7 @@ namespace ElementPeriodTable
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
+            Properties.Settings.Default.URL = "https://github.com/ShiningYangYXN/ElementPeriodTable/blob/main/README.md";
             new HelpWindow().ShowDialog();
         }
 

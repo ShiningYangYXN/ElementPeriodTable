@@ -17,6 +17,7 @@ namespace ElementPeriodTable
         public MainWindow()
         {
             InitializeComponent();
+            //Properties.Settings.Default.Reset();
             Properties.Settings.Default.Reload();
             timer = new System.Windows.Threading.DispatcherTimer();
             timer.Tick += new EventHandler(Timer_Tick);
@@ -83,12 +84,9 @@ namespace ElementPeriodTable
             {
                 if (str.Contains('-'))
                 {
-                    int min = Convert.ToInt32(str.Split("-")[0].ToString()) -1;
-                    int max = Convert.ToInt32(str.Split("-")[1].ToString());
-                    for (int i = min; i < max; i++)
+                    for (int i = Convert.ToInt32(str.Split("-")[0].ToString()) - 1; i < Convert.ToInt32(str.Split("-")[1].ToString()); i++)
                     {
-                        try { selected_btns.Add(btns[i]); }
-                        catch { break; }
+                        selected_btns.Add(btns[i]);
                     }
 
                 }

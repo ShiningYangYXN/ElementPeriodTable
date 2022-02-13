@@ -19,6 +19,7 @@
     </frameworkReferences>
     <contentFiles>
       <files include="any/net6.0-windows7.0/icon.ico" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/README.md" buildAction="Content" />
     </contentFiles>
   </metadata>
   <files>
@@ -26,6 +27,8 @@
     <file src="C:\projects\ElementPeriodTable\bin\Debug\net6.0-windows\ElementPeriodTable.dll" target="lib\net6.0-windows7.0\ElementPeriodTable.dll" />
     <file src="C:\projects\ElementPeriodTable\icon.ico" target="content\icon.ico" />
     <file src="C:\projects\ElementPeriodTable\icon.ico" target="contentFiles\any\net6.0-windows7.0\icon.ico" />
+    <file src="C:\projects\ElementPeriodTable\README.md" target="content\README.md" />
+    <file src="C:\projects\ElementPeriodTable\README.md" target="contentFiles\any\net6.0-windows7.0\README.md" />
     <file src="C:\projects\ElementPeriodTable\icon.png" target="\icon.png" />
   </files>
 </package>

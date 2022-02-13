@@ -28,26 +28,40 @@ namespace ElementPeriodTable
         {
             this.FontSize = this.ActualHeight / 15;
         }
+        private int CountChar(char chr,string str)
+        {
+            int count=0;
+            foreach(char c in str)
+            {
+                if (c == chr) count++;
+            }
+            return count;
+
+        }
         private bool Check(string CheckText)
         {
             List<string> list=new();
             try
             {
-                if (!string.IsNullOrEmpty(CheckText))
+                if (!string.IsNullOrWhiteSpace(CheckText))
                 {
                     if (CheckText.Contains(','))
                     {
                         foreach (string s in CheckText.Split(","))
                         {
-                            list.Add(s);
+                            if (!(String.IsNullOrWhiteSpace(s) && CountChar('-', s) != 1)&&s[0]!='-') list.Add(s);
+                            else return false;
+
                         }
                     }
+                    else if (CheckText.Contains(' ')) return false;
                     else list.Add(CheckText);
 
                     foreach (string s in list)
                     {
-                        if (!s.Contains("-") && Convert.ToInt32(s) >= 1 && Convert.ToInt32(s) <= 120) return true;
-                        else if (s.Contains("-") && s.Split("-").Length == 2 && Convert.ToInt32(s.Split("-")[0]) >= 1 && Convert.ToInt32(s.Split("-")[0]) <= 120 && Convert.ToInt32(s.Split("-")[1]) >= 1 && Convert.ToInt32(s.Split("-")[1]) <= 120&& Convert.ToInt32(s.Split("-")[0])< Convert.ToInt32(s.Split("-")[1])) return true;
+                        if (Convert.ToInt32(s)<0) return false;
+                        else if (!s.Contains('-') && Convert.ToInt32(s) >= 1 && Convert.ToInt32(s) <= 120) return true;
+                        else if (s.Contains('-') && s.Split("-").Length == 2 && Convert.ToInt32(s.Split("-")[0]) >= 1 && Convert.ToInt32(s.Split("-")[0]) <= 120 && Convert.ToInt32(s.Split("-")[1]) >= 1 && Convert.ToInt32(s.Split("-")[1]) <= 120&& Convert.ToInt32(s.Split("-")[0])< Convert.ToInt32(s.Split("-")[1])) return true;
                         else return false;
                     }
                     return false;
@@ -66,7 +80,7 @@ namespace ElementPeriodTable
                 Properties.Settings.Default.Selected = InputBox.Text;
                 this.Close();
             }
-            else MessageBox.Show("请检查你的输入，只能包含1~120的数字、英文“-”和“,”","错误");
+            else MessageBox.Show("请检查你的输入，只能包含1~120的数字、英文“-”和“,”，“-”左侧的数字必须比右侧小，一个范围内只能包含一个“-”，两个“,”间必须有内容","无效输入");
         }
 
 
@@ -78,6 +92,11 @@ namespace ElementPeriodTable
         private void window_Loaded(object sender, RoutedEventArgs e)
         {
             SetFontSize();
+        }
+
+        private void InputBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) SubmitButton_Click(sender, e);
         }
     }
 }

@@ -7,6 +7,16 @@
 xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"        
         mc:Ignorable="d"
         Title="帮助" Height="450" Width="800" Icon="/icon.png" WindowStartupLocation="CenterOwner" Loaded="window_Loaded" SizeChanged="window_SizeChanged">
-    <wv2:WebView2 x:Name="WV2" Source="https://github.com/ShiningYangYXN/ElementPeriodTable/blob/main/README.md" Initialized="WV2_Initialized"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.Row="0" Text="{Binding Source.AbsoluteUri, ElementName=WV2, Mode=OneWay}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" IsReadOnly="True"/>
+        <wv2:WebView2 x:Name="WV2" Source="https://github.com/ShiningYangYXN/ElementPeriodTable/blob/main/README.md" Initialized="WV2_Initialized" Grid.Row="1"/>
+    </Grid>
 
 </Window>

@@ -63,3 +63,4 @@ C:\projects\ElementPeriodTable\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.C
 C:\projects\ElementPeriodTable\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
 C:\projects\ElementPeriodTable\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
 C:\projects\ElementPeriodTable\obj\Debug\net6.0-windows\ElementPeriodTable.csproj.CopyComplete
+C:\projects\ElementPeriodTable\bin\Debug\net6.0-windows\README.md

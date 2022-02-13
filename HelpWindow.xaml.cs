@@ -12,13 +12,19 @@ namespace ElementPeriodTable
         {
             InitializeComponent();
         }
+        private void SetFontSize()
+        {
+            this.FontSize = this.ActualHeight / 30;
+        }
 
         private void window_Loaded(object sender, RoutedEventArgs e)
         {
+            SetFontSize();
         }
 
         private void window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+            SetFontSize();
         }
 
         private void WV2_Initialized(object sender, EventArgs e)
