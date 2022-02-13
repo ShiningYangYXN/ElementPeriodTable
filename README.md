@@ -26,6 +26,8 @@
 - - [2.1 设计目的](#21-设计目的)
 - - [2.2 开发环境](#22-开发环境)
 - - [2.3 核心算法](#23-核心算法)
+- - - [2.3.1 元素选择算法](#231-元素选择算法)
+- - - [2.3.2 范围纠错算法](#232-范围纠错算法)
 - [3. 测试说明](#3-测试说明)
 
 # 1. 使用说明
@@ -182,13 +184,131 @@
 
 ## 2.1 设计目的
 
+在初中化学中，元素周期表占据重要地位。但是很多初中生面临着背不下元素周期表的问题。为了解决这一问题，我设计了这个程序，以解决同学们的问题，让同学们在游戏中学会元素周期表。
+
 **[返回索引](#文档索引)**
 
 ## 2.2 开发环境
 
+|IDE|编程语言|开发框架|项目类型|运行环境|使用的Nuget包|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|Visual Studio Code 2022 Preview (17.1.0 Preview 6.0)|C#|.NET 6.0|WPF应用程序|Windows 10|Microsoft.Web.WebView2 (1.0.1108.44)|
+
 **[返回索引](#文档索引)**
 
 ## 2.3 核心算法
+
+### 2.3.1 元素选择算法
+
+算法的流程图如下：
+
+详细代码：
+
+```C#
+        private void GetNewElement()
+        {
+            string elementname = "Unknown";
+            Random rnd = new();
+            List<string> selected = new();
+            List<Button> selected_btns = new();
+            if (Properties.Settings.Default.Selected.Contains(','))
+            {
+                foreach (string str in Properties.Settings.Default.Selected.Split(","))
+                {
+                    selected.Add(str);
+                }
+            }
+            else
+            {
+                selected.Add(Properties.Settings.Default.Selected);
+            }
+            foreach (string str in selected)
+            {
+                if (str.Contains('-'))
+                {
+                    for (int i = Convert.ToInt32(str.Split("-")[0].ToString()) - 1; i < Convert.ToInt32(str.Split("-")[1].ToString()); i++)
+                    {
+                        selected_btns.Add(btns[i]);
+                    }
+
+                }
+                else
+                {
+                    selected_btns.Add(btns[Convert.ToInt32(str) - 1]);
+                }
+            }
+            if (Properties.Settings.Default.Level == 4) elementname = selected_btns[rnd.Next(selected_btns.Count)].Tag.ToString().Split(",")[rnd.Next(3)];
+            else elementname = selected_btns[rnd.Next(selected_btns.Count)].Tag.ToString().Split(",")[rnd.Next(2)];
+            
+            ElementNameBar.Content = elementname;
+
+        }
+```
+
+**[返回索引](#文档索引)**
+
+### 2.3.2 范围纠错算法
+
+算法的流程图如下：
+
+详细代码：
+
+```C#
+        private int CountChar(char chr,string str)
+        {
+            int count=0;
+            foreach(char c in str)
+            {
+                if (c == chr) count++;
+            }
+            return count;
+
+        }
+        private bool Check(string CheckText)
+        {
+            List<string> list=new();
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(CheckText))
+                {
+                    if (CheckText.Contains(','))
+                    {
+                        foreach (string s in CheckText.Split(","))
+                        {
+                            if (!(String.IsNullOrWhiteSpace(s) && CountChar('-', s) != 1)&&s[0]!='-') list.Add(s);
+                            else return false;
+
+                        }
+                    }
+                    else if (CheckText.Contains(' ')) return false;
+                    else list.Add(CheckText);
+
+                    foreach (string s in list)
+                    {
+                        if (Convert.ToInt32(s)<0) return false;
+                        else if (!s.Contains('-') && Convert.ToInt32(s) >= 1 && Convert.ToInt32(s) <= 120) return true;
+                        else if (s.Contains('-') && s.Split("-").Length == 2 && Convert.ToInt32(s.Split("-")[0]) >= 1 && Convert.ToInt32(s.Split("-")[0]) <= 120 && Convert.ToInt32(s.Split("-")[1]) >= 1 && Convert.ToInt32(s.Split("-")[1]) <= 120&& Convert.ToInt32(s.Split("-")[0])< Convert.ToInt32(s.Split("-")[1])) return true;
+                        else return false;
+                    }
+                    return false;
+                }
+                else return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Check(InputBox.Text) == true)
+            {
+                Properties.Settings.Default.Selected = InputBox.Text;
+                this.Close();
+            }
+            else MessageBox.Show("请检查你的输入，只能包含1~120的数字、英文“-”和“,”，“-”左侧的数字必须比右侧小，一个范围内只能包含一个“-”，两个“,”间必须有内容","无效输入");
+        }
+```
 
 **[返回索引](#文档索引)**
 
