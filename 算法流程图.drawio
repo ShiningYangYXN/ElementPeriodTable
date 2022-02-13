@@ -1,1 +1,59 @@
-<mxfile host="app.diagrams.net" modified="2022-02-13T11:41:07.834Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.50" version="16.5.6" etag="tTHvT0xVN4TUeIxfnDpt" type="github"><diagram id="ZjI6IUpohWY7dkhmOkNr">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-02-13T12:00:24.877Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.50" etag="1tkm6fQdvNGsJyJSY3T-" version="16.5.6" type="github" pages="2">
+  <diagram id="ZjI6IUpohWY7dkhmOkNr" name="元素选择算法">
+    <mxGraphModel dx="868" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=18;" edge="1" parent="1" source="-6W3W1Cn2v4iPyD3KBid-1" target="8b_eskSdDqmBBRvZ-9VF-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-6W3W1Cn2v4iPyD3KBid-1" value="开始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="472" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" edge="1" parent="1" source="8b_eskSdDqmBBRvZ-9VF-4" target="8b_eskSdDqmBBRvZ-9VF-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-4" value="遍历所有按钮并添加到列表btns" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="380" y="170" width="304" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-6" value="读取设置" style="swimlane;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="327" y="290" width="410" height="610" as="geometry">
+            <mxRectangle x="382" y="290" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" edge="1" parent="8b_eskSdDqmBBRvZ-9VF-6" source="8b_eskSdDqmBBRvZ-9VF-8" target="8b_eskSdDqmBBRvZ-9VF-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-8" value="输入：设置" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=18;" vertex="1" parent="8b_eskSdDqmBBRvZ-9VF-6">
+          <mxGeometry x="145" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" edge="1" parent="8b_eskSdDqmBBRvZ-9VF-6" source="8b_eskSdDqmBBRvZ-9VF-9" target="8b_eskSdDqmBBRvZ-9VF-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-9" value="以逗号为分隔符将设置分割为子字符串，并添加到列表selected" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="8b_eskSdDqmBBRvZ-9VF-6">
+          <mxGeometry x="25" y="130" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-14" value="将字符串列表转换为按钮列表" style="swimlane;fontSize=18;" vertex="1" parent="8b_eskSdDqmBBRvZ-9VF-6">
+          <mxGeometry x="25" y="230" width="360" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=18;" edge="1" parent="8b_eskSdDqmBBRvZ-9VF-14" source="8b_eskSdDqmBBRvZ-9VF-16" target="8b_eskSdDqmBBRvZ-9VF-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-16" value="输入：selected中的字符串" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=18;" vertex="1" parent="8b_eskSdDqmBBRvZ-9VF-14">
+          <mxGeometry x="35" y="35" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-17" value="包含“-”（横杠）?" style="rhombus;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="8b_eskSdDqmBBRvZ-9VF-14">
+          <mxGeometry x="85" y="125" width="190" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="are2xZORngehVb2ldyaj" name="范围纠错算法">
+    <mxGraphModel dx="868" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="CYBeYhwf_WL5aDTPHS-o-0" />
+        <mxCell id="CYBeYhwf_WL5aDTPHS-o-1" parent="CYBeYhwf_WL5aDTPHS-o-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
