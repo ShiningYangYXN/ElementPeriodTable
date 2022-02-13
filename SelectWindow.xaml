@@ -16,7 +16,7 @@
             <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0"  FontSize="{Binding FontSize, ElementName=window}" TextWrapping="WrapWithOverflow" Text="你可以在下方文本框内设置测试范围，设置规则同打印页码的设置规则，数字代表原子序数，“镧系”块的代码为119，“锕系”块的代码为120。&#xD;&#xA;如：除镧系、锕系以外的元素可表示为“1-56,72-88,104-118”"/>
+        <TextBlock Grid.Row="0"  FontSize="{Binding FontSize, ElementName=window}" TextWrapping="WrapWithOverflow" Text="你可以在下方文本框内设置测试范围，数字代表原子序数，“镧系”块的代码为119，“锕系”块的代码为120。&#xA;如：除镧系、锕系以外的元素可表示为“1-56,72-88,104-118”"/>
         <TextBox x:Name="InputBox" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" TextWrapping="WrapWithOverflow"  AutoWordSelection="True" InputMethod.IsInputMethodEnabled="False" KeyUp="InputBox_KeyUp"/>
         <Button x:Name="SubmitButton" Content="提交" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}" Click="SubmitButton_Click"/>
 

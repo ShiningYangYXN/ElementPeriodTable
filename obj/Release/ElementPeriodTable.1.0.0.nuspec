@@ -23,8 +23,8 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\ElementPeriodTable.runtimeconfig.json" target="lib\net6.0-windows7.0\ElementPeriodTable.runtimeconfig.json" />
-    <file src="C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x64\ElementPeriodTable.dll" target="lib\net6.0-windows7.0\ElementPeriodTable.dll" />
+    <file src="C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x86\ElementPeriodTable.runtimeconfig.json" target="lib\net6.0-windows7.0\ElementPeriodTable.runtimeconfig.json" />
+    <file src="C:\projects\ElementPeriodTable\bin\Release\net6.0-windows\win-x86\ElementPeriodTable.dll" target="lib\net6.0-windows7.0\ElementPeriodTable.dll" />
     <file src="C:\projects\ElementPeriodTable\icon.ico" target="content\icon.ico" />
     <file src="C:\projects\ElementPeriodTable\icon.ico" target="contentFiles\any\net6.0-windows7.0\icon.ico" />
     <file src="C:\projects\ElementPeriodTable\README.md" target="content\README.md" />
