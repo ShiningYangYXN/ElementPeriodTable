@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ElementPeriodTable"
         mc:Ignorable="d"
-        Title="选定测试范围" Icon="/icon.png" ResizeMode="CanResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Height="180" Width="320" SizeChanged="window_SizeChanged" Loaded="window_Loaded">
+        Title="选定测试范围" Icon="/icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Height="267" Width="480" SizeChanged="window_SizeChanged" Loaded="window_Loaded" Topmost="True">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ElementPeridTable"
         mc:Ignorable="d"
-        Title="关于" Height="300" Width="400" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" Icon="/icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" ShowInTaskbar="False">
+        Title="关于" Height="300" Width="400" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" Icon="/icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" ShowInTaskbar="False" Topmost="True">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>

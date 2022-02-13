@@ -49,18 +49,17 @@ namespace ElementPeriodTable
                     {
                         foreach (string s in CheckText.Split(","))
                         {
-                            if (!(String.IsNullOrWhiteSpace(s) && CountChar('-', s) != 1)&&s[0]!='-') list.Add(s);
+                            if ((!String.IsNullOrWhiteSpace(s)) && (CountChar('-', s) == 1|| CountChar('-', s) == 0) &&s[0]!='-') list.Add(s);
                             else return false;
 
                         }
                     }
-                    else if (CheckText.Contains(' ')) return false;
+                    else if (CheckText.Contains(' ')|| CountChar('-', CheckText) > 1 || CheckText[0] == '-') return false;
                     else list.Add(CheckText);
 
                     foreach (string s in list)
                     {
-                        if (Convert.ToInt32(s)<0) return false;
-                        else if (!s.Contains('-') && Convert.ToInt32(s) >= 1 && Convert.ToInt32(s) <= 120) return true;
+                        if ((!s.Contains('-')) && Convert.ToInt32(s) >= 1 && Convert.ToInt32(s) <= 120) return true;
                         else if (s.Contains('-') && s.Split("-").Length == 2 && Convert.ToInt32(s.Split("-")[0]) >= 1 && Convert.ToInt32(s.Split("-")[0]) <= 120 && Convert.ToInt32(s.Split("-")[1]) >= 1 && Convert.ToInt32(s.Split("-")[1]) <= 120&& Convert.ToInt32(s.Split("-")[0])< Convert.ToInt32(s.Split("-")[1])) return true;
                         else return false;
                     }
