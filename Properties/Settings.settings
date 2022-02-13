@@ -12,7 +12,7 @@
       <Value Profile="(Default)">1-118</Value>
     </Setting>
     <Setting Name="URL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://github.com/ShiningYangYXN/ElementPeriodTable/blob/main/README.md</Value>
+      <Value Profile="(Default)">https://shiningyangyxn.github.io/ElementPeriodTable/</Value>
     </Setting>
   </Settings>
 </SettingsFile>
