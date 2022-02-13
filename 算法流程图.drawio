@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-13T12:27:56.936Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.50" etag="JyVH1uAy2VShtq8fQI3P" version="16.5.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-02-13T12:38:29.460Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.50" etag="n1Z6uJ78Ozov_0MSp3uG" version="16.5.6" type="github" pages="2">
   <diagram id="ZjI6IUpohWY7dkhmOkNr" name="元素选择算法">
     <mxGraphModel dx="868" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -111,7 +111,7 @@
         <mxCell id="8b_eskSdDqmBBRvZ-9VF-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="8b_eskSdDqmBBRvZ-9VF-29" target="8b_eskSdDqmBBRvZ-9VF-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8b_eskSdDqmBBRvZ-9VF-29" value="生成0~3的随机数r0" style="whiteSpace=wrap;html=1;fontSize=18;fontStyle=1;startSize=23;" vertex="1" parent="1">
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-29" value="生成0~2的随机数r0" style="whiteSpace=wrap;html=1;fontSize=18;fontStyle=1;startSize=23;" vertex="1" parent="1">
           <mxGeometry x="440.75" y="1630" width="182.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8b_eskSdDqmBBRvZ-9VF-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="8b_eskSdDqmBBRvZ-9VF-43" target="8b_eskSdDqmBBRvZ-9VF-45">
@@ -129,7 +129,7 @@
         <mxCell id="8b_eskSdDqmBBRvZ-9VF-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="8b_eskSdDqmBBRvZ-9VF-52" target="8b_eskSdDqmBBRvZ-9VF-53">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8b_eskSdDqmBBRvZ-9VF-52" value="生成0~2的随机数r1" style="whiteSpace=wrap;html=1;fontSize=18;fontStyle=1;startSize=23;" vertex="1" parent="1">
+        <mxCell id="8b_eskSdDqmBBRvZ-9VF-52" value="生成0~1的随机数r1" style="whiteSpace=wrap;html=1;fontSize=18;fontStyle=1;startSize=23;" vertex="1" parent="1">
           <mxGeometry x="440.75" y="1860" width="182.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8b_eskSdDqmBBRvZ-9VF-53" value="将元素提示框的文本改为a [r1]位置的值" style="whiteSpace=wrap;html=1;fontSize=18;fontStyle=1;startSize=23;" vertex="1" parent="1">
