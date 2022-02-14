@@ -16,12 +16,16 @@
 
   <ItemGroup>
     <None Remove="README.md" />
+    <None Remove="README.mhtml" />
     <None Remove="SplashScreen.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="icon.ico" />
     <Content Include="README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="README.mhtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

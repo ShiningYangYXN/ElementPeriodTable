@@ -10,5 +10,6 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("readme.md")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("readme.mhtml")]
 
 
