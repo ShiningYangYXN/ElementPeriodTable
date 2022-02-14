@@ -190,9 +190,13 @@
 
 ## 2.2 开发环境
 
-|IDE|编程语言|开发框架|项目类型|运行环境|使用的Nuget包|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|Visual Studio Code 2022 Preview (17.1.0 Preview 6.0)|C#|.NET 6.0|WPF应用程序|Windows 10|Microsoft.Web.WebView2 (1.0.1108.44)|
+|项目|内容|
+|:---:|:---:|
+|IDE|Visual Studio Code 2022 Preview (17.1.0 Preview 6.0)|
+|编程语言|C#|
+|开发框架|.NET 6.0|
+|项目类型|WPF应用程序|
+|运行环境|Windows 10|
 
 **[返回索引](#文档索引)**
 
@@ -281,18 +285,17 @@
                     {
                         foreach (string s in CheckText.Split(","))
                         {
-                            if (!(String.IsNullOrWhiteSpace(s) && CountChar('-', s) != 1)&&s[0]!='-') list.Add(s);
+                            if ((!String.IsNullOrWhiteSpace(s)) && (CountChar('-', s) == 1|| CountChar('-', s) == 0) &&s[0]!='-') list.Add(s);
                             else return false;
 
                         }
                     }
-                    else if (CheckText.Contains(' ')) return false;
+                    else if (CheckText.Contains(' ')|| CountChar('-', CheckText) > 1 || CheckText[0] == '-') return false;
                     else list.Add(CheckText);
 
                     foreach (string s in list)
                     {
-                        if (Convert.ToInt32(s)<0) return false;
-                        else if (!s.Contains('-') && Convert.ToInt32(s) >= 1 && Convert.ToInt32(s) <= 120) return true;
+                        if ((!s.Contains('-')) && Convert.ToInt32(s) >= 1 && Convert.ToInt32(s) <= 120) return true;
                         else if (s.Contains('-') && s.Split("-").Length == 2 && Convert.ToInt32(s.Split("-")[0]) >= 1 && Convert.ToInt32(s.Split("-")[0]) <= 120 && Convert.ToInt32(s.Split("-")[1]) >= 1 && Convert.ToInt32(s.Split("-")[1]) <= 120&& Convert.ToInt32(s.Split("-")[0])< Convert.ToInt32(s.Split("-")[1])) return true;
                         else return false;
                     }
@@ -304,15 +307,6 @@
             {
                 return false;
             }
-        }
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Check(InputBox.Text) == true)
-            {
-                Properties.Settings.Default.Selected = InputBox.Text;
-                this.Close();
-            }
-            else MessageBox.Show("请检查你的输入，只能包含1~120的数字、英文“-”和“,”，“-”左侧的数字必须比右侧小，一个范围内只能包含一个“-”，两个“,”间必须有内容","无效输入");
         }
 ```
 
