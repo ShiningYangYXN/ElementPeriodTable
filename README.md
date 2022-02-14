@@ -8,6 +8,11 @@
 >
 >若在使用过程中发现什么问题，欢迎提交Issue！
 
+# 视频教程
+
+![image](https://user-images.githubusercontent.com/97453940/153873806-ddcc05d0-3a7c-4ef1-bec2-5f9479159f8d.png)
+**微信** `扫码观看视频`
+
 # 文档索引
 
 - [1. 使用说明](#1-使用说明)
