@@ -81,7 +81,12 @@ namespace ElementPeriodTable
         {
             Button btn = (Button)sender;
 
-            MessageBox.Show("元素符号："+btn.Tag.ToString().Split(",")[0]+ "\n原子序数：" + btn.Content+ "\n中文名：" + btn.Tag.ToString().Split(",")[1]+ "\n原子量：" + btn.Tag.ToString().Split(",")[2], "元素介绍");
+            MessageBox.Show("元素符号："+btn.Tag.ToString().Split(",")[0]+ "\n原子序数：" + btn.Content+ "\n中文名：" + btn.Tag.ToString().Split(",")[1]+ "\n原子量：" + btn.Tag.ToString().Split(",")[2], "元素介绍",MessageBoxButton.OK,MessageBoxImage.Information);
+        }
+
+        private void Btn_RhtClick(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

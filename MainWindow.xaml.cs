@@ -162,7 +162,7 @@ namespace ElementPeriodTable
                 {
                     if (button.Tag.ToString().Split(",")[0] == ElementNameBar.Content.ToString() || button.Tag.ToString().Split(",")[1] == ElementNameBar.Content.ToString() || button.Tag.ToString().Split(",")[2] == ElementNameBar.Content.ToString()) rightBtn = button;
                 }
-                MessageBox.Show("超时未答题\n以后手速要快啊！\n"+ElementNameBar.Content.ToString()+"是"+rightBtn.Content.ToString()+"号元素", "超时未答");
+                MessageBox.Show("超时未答题\n以后手速要快啊！\n"+ElementNameBar.Content.ToString()+"是"+rightBtn.Content.ToString()+"号元素", "超时未答",MessageBoxButton.OK,MessageBoxImage.Warning);
                 NewGame();
             }
             else
@@ -183,20 +183,20 @@ namespace ElementPeriodTable
             {
                 
                 Properties.Settings.Default.Score += 10;
-                MessageBox.Show("恭喜你，答对了，积分+10!\n又记住了一个元素！", "回答正确");
+                MessageBox.Show("恭喜你，答对了，积分+10!\n又记住了一个元素！", "回答正确", MessageBoxButton.OK, MessageBoxImage.Information);
                 switch (Properties.Settings.Default.Score)
                 {
                     case 10:
-                        MessageBox.Show("恭喜！你已晋级LV1，获得“努力向前”称号！\n当前等级每题限时25s", "晋级提醒");
+                        MessageBox.Show("恭喜！你已晋级LV1，获得“努力向前”称号！\n当前等级每题限时25s", "晋级提醒",MessageBoxButton.OK,MessageBoxImage.Information);
                         break;
                     case 100:
-                        MessageBox.Show("恭喜！你已晋级LV2，获得“小有成就”称号！\n当前等级每题限时20s", "晋级提醒");
+                        MessageBox.Show("恭喜！你已晋级LV2，获得“小有成就”称号！\n当前等级每题限时20s", "晋级提醒", MessageBoxButton.OK, MessageBoxImage.Information);
                         break;
                     case 1000:
-                        MessageBox.Show("恭喜！你已晋级LV3，获得“聪明绝顶”称号！\n当前等级每题限时15s", "晋级提醒");
+                        MessageBox.Show("恭喜！你已晋级LV3，获得“聪明绝顶”称号！\n当前等级每题限时15s", "晋级提醒", MessageBoxButton.OK, MessageBoxImage.Information);
                         break;
                     case 10000:
-                        MessageBox.Show("恭喜！你已晋级最高等级LV4，获得“顶级大师”称号！\n当前等级每题限时10s\n你解锁了原子量测试", "晋级提醒");
+                        MessageBox.Show("恭喜！你已晋级最高等级LV4，获得“顶级大师”称号！\n当前等级每题限时10s\n你解锁了原子量测试", "晋级提醒", MessageBoxButton.OK, MessageBoxImage.Information);
                         break;
                     default: break;
                 }
@@ -208,7 +208,8 @@ namespace ElementPeriodTable
                 {
                     if (button.Tag.ToString().Split(",")[0] == ElementNameBar.Content.ToString() || button.Tag.ToString().Split(",")[1] == ElementNameBar.Content.ToString() || button.Tag.ToString().Split(",")[2] == ElementNameBar.Content.ToString()) rightBtn=button ;
                 }
-            MessageBox.Show("很遗憾，答错了\n以后要多加巩固啊！\n" + ElementNameBar.Content.ToString() + "是" + rightBtn.Content.ToString() + "号元素", "回答错误");
+            
+            MessageBox.Show("很遗憾，答错了\n以后要多加巩固啊！\n" + ElementNameBar.Content.ToString() + "是" + rightBtn.Content.ToString() + "号元素", "回答错误", MessageBoxButton.OK, MessageBoxImage.Error);
                 
             }
 
@@ -246,7 +247,7 @@ namespace ElementPeriodTable
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("重置游戏会导致等级和积分清零哦\n确定要重置吗？", "重置确认", button: MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            if (MessageBox.Show("重置游戏会导致等级和积分清零哦\n确定要重置吗？", "重置确认",MessageBoxButton.OKCancel,MessageBoxImage.Warning) == MessageBoxResult.OK)
             {
                 timer.Stop();
                 Properties.Settings.Default.Reset();                lvLabel.Content = "🏆0|默默无闻";
@@ -259,7 +260,7 @@ namespace ElementPeriodTable
         private void window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Properties.Settings.Default.Save();
-            if (!(MessageBox.Show("关闭程序后测试范围、等级和积分会自动保存\n确定要关闭吗？", "关闭确认", button: MessageBoxButton.OKCancel) == MessageBoxResult.OK)) e.Cancel = true; 
+            if (!(MessageBox.Show("关闭程序后测试范围、等级和积分会自动保存\n确定要关闭吗？", "关闭确认",MessageBoxButton.OKCancel,MessageBoxImage.Warning) == MessageBoxResult.OK)) e.Cancel = true; 
         }
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
@@ -289,7 +290,7 @@ namespace ElementPeriodTable
         private void Btn_RhtClick(object sender, MouseButtonEventArgs e)
         {
             Button btn = (Button)sender;
-            MessageBox.Show("元素符号："+btn.Tag.ToString().Split(",")[0]+ "\n原子序数：" + btn.Content+ "\n中文名：" + btn.Tag.ToString().Split(",")[1]+ "\n原子量：" + btn.Tag.ToString().Split(",")[2], "翻开提示");
+            MessageBox.Show("元素符号："+btn.Tag.ToString().Split(",")[0]+ "\n原子序数：" + btn.Content+ "\n中文名：" + btn.Tag.ToString().Split(",")[1]+ "\n原子量：" + btn.Tag.ToString().Split(",")[2], "翻开提示",MessageBoxButton.OK,MessageBoxImage.Information);
         }
 
         private void SelectButton_Click(object sender, RoutedEventArgs e)

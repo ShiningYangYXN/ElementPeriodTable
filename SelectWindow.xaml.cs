@@ -79,7 +79,7 @@ namespace ElementPeriodTable
                 Properties.Settings.Default.Selected = InputBox.Text;
                 this.Close();
             }
-            else MessageBox.Show("请检查你的输入，只能包含1~120的数字、英文“-”和“,”，“-”左侧的数字必须比右侧小，一个范围内只能包含一个“-”，两个“,”间必须有内容","无效输入");
+            else MessageBox.Show("请检查你的输入，只能包含1~120的数字、英文“-”和“,”，“-”左侧的数字必须比右侧小，一个范围内只能包含一个“-”，两个“,”间必须有内容","无效输入",MessageBoxButton.OK,MessageBoxImage.Error);
         }
 
 
