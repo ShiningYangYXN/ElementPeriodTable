@@ -49,11 +49,11 @@
 
 ### 1.1.2 认识界面
 
-![image](https://user-images.githubusercontent.com/97453940/153740348-4a7bd998-03e3-48fe-a7f8-087eed17605c.png)
+![image](https://user-images.githubusercontent.com/97453940/154271172-54def082-aa95-4bae-b279-ba7d0800960c.png)
 
 这是程序界面。上方按钮是[功能区](#131-功能区)，你可以点击对应按钮启动相应功能。具体按钮的功能在[后文](#131-功能区)会予以介绍。
 
-![image](https://user-images.githubusercontent.com/97453940/153740474-93df54d1-bacd-4055-9337-4e0ac2f322d8.png)
+![image](https://user-images.githubusercontent.com/97453940/154271314-a6cef825-9471-4956-b772-02559807030d.png)
 
 功能区下方是等级积分区。积分与等级的换算规则以及不同等级的介绍会在[后文](#122-等级说明)介绍。
 
@@ -61,7 +61,7 @@
 
 下方按钮排列成元素周期表形状，上面的文字是每个元素的原子序数。元素周期表的左侧文字代表对应行的周期，上方文字代表对应列的族。
 
-![image](https://user-images.githubusercontent.com/97453940/153740531-0c0283d8-eee1-4ed9-b05e-282095976a25.png)
+![image](https://user-images.githubusercontent.com/97453940/154271394-47876c9d-903d-457d-8e9b-10c033e86ac9.png)
 
 元素周期表上方空地由3部分构成。左侧是元素提示框，右上方是限时进度条，右下方是[游戏规则](#12-游戏规则)。
 
@@ -76,15 +76,15 @@
 你需要根据元素提示框的显示内容，单击元素周期表上对应位置的方块。答对者有积分奖励。
 **为了鼓动大家的学习积极性，我没有设置超时或答错的扣分，这不是BUG！**
 
-![image](https://user-images.githubusercontent.com/97453940/153740769-d038be4d-ac2f-4860-9506-9beddfac54a3.png)
+![image](https://user-images.githubusercontent.com/97453940/154271556-cc1aa843-ac7c-4cbb-89a3-cc5adfbc9ac1.png)
 
 如果你答对了，会得到这样一个弹窗，并获得10积分。
 
-![image](https://user-images.githubusercontent.com/97453940/153740790-8d23812c-81cb-4c1d-9574-22fcc24923ee.png)
+![image](https://user-images.githubusercontent.com/97453940/154271604-ec926115-e8a1-4563-b173-0e06f0d1e4d1.png)
 
 如果你答错了，会获得这样一个弹窗，并告诉你正确答案。你的积分不会有任何变化。
 
-![image](https://user-images.githubusercontent.com/97453940/153749594-6e954c77-43ad-4a2a-877b-ec6a7b95ff16.png)
+![image](https://user-images.githubusercontent.com/97453940/154271481-b26b4548-a391-45bd-ac13-88359872ed8f.png)
 
 如果你超时未答，会获得这样一个弹窗，并告诉你正确答案。你的积分不会有任何变化。
 
@@ -104,7 +104,7 @@
 
 如果你的积分达到晋级标准，你会收到类似下图所示的弹窗。
 
-![image](https://user-images.githubusercontent.com/97453940/153741175-69b0f250-8dfa-4078-b59f-0386b9482c2e.png)
+![image](https://user-images.githubusercontent.com/97453940/154271745-a0adafbd-8c76-4848-832c-fbfd888a4a5c.png)
 
 **点掉弹窗后，游戏会自动继续**
 
@@ -114,7 +114,7 @@
 
 如果你暂时想不出元素所在的位置，你可以右键单击任意按钮查看提示。不必有顾虑，你可以翻开提示无限次，而不用担心自己的积分受到影响（前提是手速足够快）。
 
-![image](https://user-images.githubusercontent.com/97453940/153741276-2e696345-a716-47b5-91e4-596d45d2ef65.png)
+![image](https://user-images.githubusercontent.com/97453940/154271796-7f16ea24-f876-4593-98ab-67ab680faaab.png)
 
 **引发弹窗后，游戏不会暂停，请尽快返回答题**
 
@@ -133,7 +133,7 @@
 
 单击 `学习` 按钮，会启动[学习视图](#132-学习视图)。具体的用法会在[后文](#132-学习视图)介绍。
 
-![image](https://user-images.githubusercontent.com/97453940/153744914-37c19ab3-98f1-48dd-b808-43a98c5f69f4.png)
+![image](https://user-images.githubusercontent.com/97453940/154272098-0bcc44a6-b256-42fe-aecf-41fa6a8643ad.png)
 
 单击 `关于` 按钮，会启动关于窗口。
 
@@ -151,11 +151,11 @@
 
 **打开学习视图后，游戏窗口将会隐藏，关闭学习视图或点击 `返回游戏` 按钮后恢复显示。学习视图仅供学习使用，所有行为不计入积分**
 
-![image](https://user-images.githubusercontent.com/97453940/153744914-37c19ab3-98f1-48dd-b808-43a98c5f69f4.png)
+![image](https://user-images.githubusercontent.com/97453940/154272134-205f73b4-adb5-466f-8459-f2d30feba78e.png)
 
 你可以将鼠标移到对应的按钮上以显示对应的元素信息。元素信息会被显示在元素周期表上方的空地上。
 
-![image](https://user-images.githubusercontent.com/97453940/153746005-65aaab98-3c04-4dff-8d8b-5586e77d7d56.png)
+![image](https://user-images.githubusercontent.com/97453940/154272174-4926eb05-6a98-4bd3-a629-301afe1660ca.png)
 
 如果你直接点击某个按钮，将会直接弹窗显示对应的元素信息。
 
@@ -179,7 +179,7 @@
 
 **注意：测试范围设置时不可以包含除数字、逗号、横杠以外的其他字符。一组范围只能包含一个横杠，横杠两端必须有数字，且左边<右边，两边数字必须在1~120的范围以内。单个代码必须是1~120的数字。两个逗号之间必须有内容。如果输入不符合要求，将会收到如下弹窗：**
 
-![image](https://user-images.githubusercontent.com/97453940/153746436-9f7957bc-4e15-4e73-98ee-43f40d9f7415.png)
+![image](https://user-images.githubusercontent.com/97453940/154272270-ea281e42-bf23-4c3c-8c5e-2f9366e10b74.png)
 
 设置完之后，点击 `提交` 或按下 `ENTER` 可以保存更改。**所有更改在下一局生效。窗口关闭时测试范围会和等级、积分一起保存。**
 
@@ -343,5 +343,6 @@
 |18|检查“帮助”功能是否正常|功能正常|✓通过|-|2022.2.14，v22.2.13|-|
 |19|检查“关于”功能是否正常|功能正常|✓通过|-|2022.2.14，v22.2.13|-|
 |20|游戏视图下右键点击按钮，看是否有提示|提示正常|✓通过|-|2022.2.14，v22.2.13|-|
+|21|检查各窗口界面优化是否有效|界面正常|✓通过|-|2022.2.16，v22.2.16|-|
 
 **[返回索引](#文档索引)**
