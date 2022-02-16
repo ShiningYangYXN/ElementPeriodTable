@@ -26,11 +26,11 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ResetButton" Grid.Column="0" Content="重置" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ResetButton_Click" />
-            <Button x:Name="HelpButton" Grid.Column="1" Content="帮助" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
-            <Button x:Name="LearnButton" Grid.Column="2" Content="学习" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="LearnButton_Click"/>
-            <Button x:Name="AboutButton" Grid.Column="3" Content="关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
-            <Button x:Name="SelectButton" Grid.Column="4" Content="测试范围" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="SelectButton_Click"/>
+            <Button x:Name="ResetButton" Grid.Column="0" Content="🔄重置" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ResetButton_Click" />
+            <Button x:Name="HelpButton" Grid.Column="1" Content="❔帮助" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
+            <Button x:Name="LearnButton" Grid.Column="2" Content="📖学习" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="LearnButton_Click"/>
+            <Button x:Name="AboutButton" Grid.Column="3" Content="🔗关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
+            <Button x:Name="SelectButton" Grid.Column="4" Content="⚙测试范围" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="SelectButton_Click"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -208,7 +208,7 @@
             <Button Grid.Column="3" Grid.Row="7" x:Name="btnAcLr" Tag="Ac~Lr,锕系,---" Height="Auto" Width="Auto" Click="Btn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" MouseRightButtonUp="Btn_RhtClick" FontSize="{Binding FontSize, ElementName=window}" Background="GreenYellow"/>
             <Rectangle Grid.Column="3" Grid.Row="4" Stroke="Red" Grid.RowSpan="4" Grid.ColumnSpan="10" StrokeThickness="3"/>
             <Rectangle Grid.Column="3" Grid.Row="9" Stroke="Red" Grid.RowSpan="2" Grid.ColumnSpan="15" StrokeThickness="3"/>
-            <Grid Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="10">
+            <Grid Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="3*"/>

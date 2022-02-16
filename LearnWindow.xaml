@@ -26,9 +26,9 @@
                 <ColumnDefinition/>
 
             </Grid.ColumnDefinitions>
-            <Button x:Name="ReturnButton" Grid.Column="0" Content="返回游戏" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ReturnButton_Click"/>
-            <Button x:Name="HelpButton" Grid.Column="1" Content="帮助" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
-            <Button x:Name="AboutButton" Grid.Column="2" Content="关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
+            <Button x:Name="ReturnButton" Grid.Column="0" Content="↩返回游戏" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="ReturnButton_Click"/>
+            <Button x:Name="HelpButton" Grid.Column="1" Content="📖帮助" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="HelpButton_Click"/>
+            <Button x:Name="AboutButton" Grid.Column="2" Content="🔗关于" Height="Auto" Width="Auto" FontSize="{Binding FontSize, ElementName=window}" Click="AboutButton_Click"/>
         </Grid>
         <Label Grid.Row="1" Content="鼠标移动到元素所对应的方块，查看介绍，单击方块以弹窗方式显示介绍" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="{Binding FontSize, ElementName=window}"/>
 
